@@ -33,8 +33,6 @@ Contact.loadContacts = function(done){
 
 Contact.saveContacts = function(contacts, done) {
 	var jsonfile = require('jsonfile')
-	//var contacts = [ { name: "John Smith", number: "603-123-9090" } ]
-
 	jsonfile.writeFile('data.json', contacts, function(err, data){
 		return done(err)
 	})
@@ -57,6 +55,8 @@ Contact.findContacts = function(name, done) {
 				done(err, names)
 	})
 }
+
+
 
 
 
